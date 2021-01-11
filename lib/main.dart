@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_james/button.dart';
 import 'package:flutter_james/customAppbar.dart';
 import 'package:flutter_james/dataPage.dart';
+import 'package:flutter_james/notifications.dart';
+import 'package:flutter_james/screenRotation.dart';
+import 'package:flutter_james/youtubeWidget.dart';
 
 void main(){
   runApp(MyApp());
@@ -68,7 +71,60 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-            )
+            ),
+            SizedBox(height: 20,),
+            Container(
+              child: Column(
+                children: [
+                  Container(
+                  ),
+                  RaisedButton(onPressed: ()  {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context)=>Notifications()
+                    ),
+                    );
+                  },
+                    child: Text('Notifications'),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 20,),
+            Container(
+              child: Column(
+                children: [
+                  Container(
+                  ),
+                  RaisedButton(onPressed: ()  {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context)=>YoutubeWidget()
+                    ),
+                    );
+                  },
+                    child: Text('Youtube Widget'),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 20,),
+            Container(
+              child: Column(
+                children: [
+                  Container(
+                  ),
+                  RaisedButton(onPressed: ()  {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context)=>ScreenRotation()
+                    ),
+                    );
+                  },
+                    child: Text('화면회전 감지'),
+                  ),
+                ],
+              ),
+            ),
+
+
           ],
         ),
 
