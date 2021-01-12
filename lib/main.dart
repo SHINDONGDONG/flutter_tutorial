@@ -6,7 +6,9 @@ import 'package:flutter_james/children_listMap.dart';
 import 'package:flutter_james/customAppbar.dart';
 import 'package:flutter_james/dataPage.dart';
 import 'package:flutter_james/dateTimeCal.dart';
+import 'package:flutter_james/gradetion.dart';
 import 'package:flutter_james/image_picker.dart';
+import 'package:flutter_james/MediaQ.dart';
 import 'package:flutter_james/notifications.dart';
 import 'package:flutter_james/screenRotation.dart';
 import 'package:flutter_james/share.dart';
@@ -205,6 +207,24 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+            // SizedBox(height: 20,),
+            // Container(
+            //   child: Column(
+            //     children: [
+            //       Container(
+            //       ),
+            //       RaisedButton(onPressed: ()  {
+            //
+            //         Navigator.of(context).push(MaterialPageRoute(
+            //           builder: (context)=>Share()
+            //         ),
+            //         );
+            //       },
+            //         child: Text('Share'),
+            //       ),
+            //     ],
+            //   ),
+            // ),
             SizedBox(height: 20,),
             Container(
               child: Column(
@@ -212,27 +232,37 @@ class HomeScreen extends StatelessWidget {
                   Container(
                   ),
                   RaisedButton(onPressed: ()  {
-
                     Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context)=>Share()
+                        builder: (context)=>MediaQ()
                     ),
                     );
                   },
-                    child: Text('Share'),
+                    child: Text('MediaQ'),
                   ),
                 ],
               ),
             ),
-
           ],
         ),
 
 
+
       ),
           Container(
-            child: Center(
-              child: Text('2번 VIEW'),
+           child: Column(
+              children: [
+              Container(
+          ),
+          RaisedButton(onPressed: ()  {
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (context)=>GradetionF()
             ),
+            );
+          },
+            child: Text('GradetionF'),
+          ),
+        ],
+      ),
           )
         ],
       )
